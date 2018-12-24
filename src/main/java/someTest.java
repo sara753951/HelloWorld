@@ -5,6 +5,14 @@ public class someTest {
 
     public static void main(String[] args) {
 
+        String string = "qaz";
+        StringBuilder sb = new StringBuilder(string);
+        doSomeTh(sb);
+        string = sb.toString();
+        System.out.println(string);
+
+        System.out.println(getTimeLineLeftStr("###2016 年 -‐ 至今        深圳奥思数据科技有限公司               CTO ###2017 年 -‐ 至今      西安交通大学研究生院       外聘专家 ","2016 年","今"));
+
 
 
         String s1 = "R32冷媒：R32冷媒为全新冷媒，其主要特点为能有效提高产品的能源效率及制冷制热量指标，同时不会对地球造成任何污染的冷媒，目前日本大部份空调已采用R32冷媒~";
@@ -25,6 +33,10 @@ public class someTest {
         str = str.replaceAll("\\p{P}","").trim();
         str = str.replaceAll("[^0-9a-zA-Z\\u4e00-\\u9fa5\\s]+","").trim();
         System.out.println(str);
+    }
+
+    private static void doSomeTh(StringBuilder s1) {
+        s1.append("zaq");
     }
 
     public int editDistance(String str1, String str2) {
@@ -79,5 +91,32 @@ public class someTest {
         int ed = editDistance(str1, str2);
         System.out.println("ed: " + ed);
         return 1 - (double) ed / Math.max(str1.length(), str2.length());
+    }
+
+    public static String getTimeLineLeftStr(String line, String startTime, String endTime) {
+
+
+        String[] lineSplit = line.split("###");
+        for(String seg : lineSplit) {
+            if(seg.indexOf(endTime)>=0) {
+                String leftStr = seg.substring(seg.indexOf(endTime) + endTime.length()).trim();
+                if(containesStandardChar(leftStr)) {
+                    return leftStr;
+                }
+                if(seg.indexOf(startTime)>=0) {
+                    return seg.substring(0,seg.indexOf(startTime));
+                }
+            }
+        }
+        return null;
+    }
+
+    public static boolean containesStandardChar(String... strArr) {
+        for(String str : strArr) {
+            if(!str.matches(".*[\u4e00-\u9fa5a-z0-9A-Z]+.*")) {
+                return false;
+            }
+        }
+        return true;
     }
 }
