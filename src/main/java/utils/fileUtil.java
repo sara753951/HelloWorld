@@ -2,6 +2,7 @@ package utils;
 
 import java.io.*;
 import java.util.ArrayList;
+import java.util.zip.GZIPOutputStream;
 
 /**
  * Created by yanxinming on 2018/11/7
@@ -82,6 +83,36 @@ public class fileUtil {
             ex.printStackTrace();
         }
         return sb.toString();
+    }
+
+    public static OutputStream openFiletoWrite(String path) throws IOException {
+        OutputStream writer = getBufferedOutputStream(path);
+        return writer;
+    }
+
+    public static OutputStream getBufferedOutputStream(String path) throws IOException {
+        File file = new File(path);
+        Object os = null;
+        if(!file.exists()) {
+            file.createNewFile();
+            os = new BufferedOutputStream(new FileOutputStream(file));
+        } else {
+            os = new BufferedOutputStream(new FileOutputStream(file,true));
+        }
+
+        if(path.endsWith(".gz")) {
+            os = new GZIPOutputStream((OutputStream)os);
+        }
+
+        return (OutputStream)os;
+    }
+
+    public static void writeStringToFile(OutputStream writer, String contents, String encoding) throws IOException {
+        writer.write(contents.getBytes(encoding));
+    }
+
+    public static void closeFile(OutputStream writer) throws IOException{
+        writer.close();
     }
 
     public static void main(String[] args) {

@@ -13,20 +13,45 @@ public class regexLearning {
 
     public static void main(String[] args) {
 
+        String str = "window.jsonpXctrl4173&&jsonpXctrl4173(\n" +
+                "\t\t\t{\"context\":{\"time\":\"1556102451359\"},\"result\":{\"1947676\":{\"context\":{\"service\":\"tms\"},\"ext\":{\"source\":0},\"result\":[{\"content\":\"新一代全面屏屏幕，支持无线充电功能，强大的性能而又不失颜值。\",\"title\":\"新款5.8英寸iPhone X\",\"pic\":\"//img.alicdn.com/imgextra/i3/836552381/TB2lr2TaqLN8KJjSZFGXXbjrVXa_!!836552381-0-daren.jpg\",\"zanTotal\":\"107582\",\"itemId\":\"561000598175\",\"url\":\"//www.taobao.com/markets/tbhome/yhh-detail?contentId=2500000200443831976&scm=1007.12846.65991.0&pvid=fe161b19-7359-4caa-b3ef-8988562a2941\",\"contentId\":\"2500000200443831976\",\"_sys_point_local\":false},{\"content\":\"《破产姐妹》max最爱Tarte哑光口红笔\",\"title\":\"max破产都要买的口红\",\"pic\":\"//img.alicdn.com/imgextra/i1/3107144874/TB2i9NXbwkLL1JjSZFpXXa7nFXa_!!3107144874-0-beehive-scenes.jpg\",\"zanTotal\":\"5944\",\"itemId\":\"523836898501\",\"url\":\"//www.taobao.com/markets/tbhome/yhh-detail?contentId=2500000200348015010&scm=1007.12846.65991.0&pvid=fe161b19-7359-4caa-b3ef-8988562a2941\",\"contentId\":\"2500000200348015010\",\"_sys_point_local\":false},{\"content\":\"这款指甲油是3D效果的，银色中带着一点粉，宛如光下的贝壳。\",\"title\":\"MissCandy指甲油\",\"pic\":\"//img.alicdn.com/imgextra/i3/845871947/TB2X6qOv30kpuFjSspdXXX4YXXa_!!845871947.jpg\",\"zanTotal\":\"73295\",\"itemId\":\"534714077614\",\"url\":\"//www.taobao.com/markets/tbhome/yhh-detail?contentId=2700000200293244777&scm=1007.12846.65991.0&pvid=fe161b19-7359-4caa-b3ef-8988562a2941\",\"contentId\":\"2700000200293244777\",\"_sys_point_local\":false},{\"content\":\"限量的军绿色，帅气且硬汉风格十足。\",\"title\":\"限量军绿色PUMA IGNITE evoKNIT\",\"pic\":\"//img.alicdn.com/imgextra/i4/47537911/TB2k1lrhmXlpuFjy0FeXXcJbFXa_!!47537911-0-beehive-scenes.jpg\",\"zanTotal\":\"64276\",\"itemId\":\"541685684057\",\"url\":\"//www.taobao.com/markets/tbhome/yhh-detail?contentId=2200000200188090295&scm=1007.12846.65991.0&pvid=fe161b19-7359-4caa-b3ef-8988562a2941\",\"contentId\":\"2200000200188090295\",\"_sys_point_local\":false},{\"content\":\"还记得儿时我们都很喜欢走起路来又发光又有声音的鞋吗？而现在，耐克为我们带来了这样经典的回忆。并且，不只有回忆，更有逼格满满的黑科技。\",\"title\":\"Nike Air Mag回到未来\",\"pic\":\"//img.alicdn.com/imgextra/i2/12673075/TB2qXxlivxNTKJjy0FjXXX6yVXa_!!12673075-0-beehive-scenes.jpg\",\"zanTotal\":\"48457\",\"itemId\":\"40000184534\",\"url\":\"//www.taobao.com/markets/tbhome/yhh-detail?contentId=2400000200401124659&scm=1007.12846.65991.0&pvid=fe161b19-7359-4caa-b3ef-8988562a2941\",\"contentId\":\"2400000200401124659\",\"_sys_point_local\":false},{\"content\":\"金色猫眼时间刻度搭配纤长双针简约复古。\",\"title\":\"天王表 天猫联名款石英男表\",\"pic\":\"//img.alicdn.com/imgextra/i1/2348167658/O1CN0126RPXWNIblZq1XW_!!2348167658-0-daren.jpg\",\"zanTotal\":\"8\",\"itemId\":\"578128605225\",\"url\":\"//www.taobao.com/markets/tbhome/yhh-detail?contentId=2500000211536890518&scm=1007.12846.65991.0&pvid=fe161b19-7359-4caa-b3ef-8988562a2941\",\"contentId\":\"2500000211536890518\",\"_sys_point_local\":false},{\"content\":\"堪称年度口红界的巨头，难买程度一点不输阿玛尼和YSL之下。\",\"title\":\"【超级难买】NARS口红 #MONA色号\",\"pic\":\"//img.alicdn.com/imgextra/i3/3189315077/TB2CVE6vMxlpuFjSszbXXcSVpXa_!!3189315077-0-beehive-scenes.jpg\",\"zanTotal\":\"42698\",\"itemId\":\"552954063533\",\"url\":\"//www.taobao.com/markets/tbhome/yhh-detail?contentId=2200000200290605629&scm=1007.12846.65991.0&pvid=fe161b19-7359-4caa-b3ef-8988562a2941\",\"contentId\":\"2200000200290605629\",\"_sys_point_local\":false},{\"content\":\"极品冰种质地，视觉效果通透莹润。\",\"title\":\"Gogan 冰种玉镯\",\"pic\":\"//img.alicdn.com/tfscom/i2/256691439/TB2wjP9bXgkyKJjSspfXXcj1XXa_!!256691439.jpg\",\"zanTotal\":\"190\",\"itemId\":\"556162851123\",\"url\":\"//www.taobao.com/markets/tbhome/yhh-detail?contentId=2500000200723745120&scm=1007.12846.65991.0&pvid=fe161b19-7359-4caa-b3ef-8988562a2941\",\"contentId\":\"2500000200723745120\",\"_sys_point_local\":false},{\"content\":\"深层清洁肌肤收缩毛孔，改善暗沉提亮肤色，保湿控油舒缓修护肌肤\",\"title\":\"熬夜脸救星--Eve Lom全能急救面膜\",\"pic\":\"//img.alicdn.com/imgextra/i1/3066734963/TB2m0jniM0kpuFjSspdXXX4YXXa_!!3066734963.jpg\",\"zanTotal\":\"26823\",\"itemId\":\"38788747840\",\"url\":\"//www.taobao.com/markets/tbhome/yhh-detail?contentId=2200000200198527265&scm=1007.12846.65991.0&pvid=fe161b19-7359-4caa-b3ef-8988562a2941\",\"contentId\":\"2200000200198527265\",\"_sys_point_local\":false},{\"content\":\"将刀用火加热到上百摄氏度，一刀切到水宝宝上，清脆的声音会让你的疲劳一下子消失。小孩子慎玩。\",\"title\":\"走红的解压神器-切割史莱姆\",\"pic\":\"//img.alicdn.com/imgextra/i1/2245141975/TB2Rghto7yWBuNjy0FpXXassXXa_!!2245141975-0-beehive-scenes.jpg\",\"zanTotal\":\"391\",\"itemId\":\"44758716996\",\"url\":\"//www.taobao.com/markets/tbhome/yhh-detail?contentId=2400000200635108293&scm=1007.12846.65991.0&pvid=fe161b19-7359-4caa-b3ef-8988562a2941\",\"contentId\":\"2400000200635108293\",\"_sys_point_local\":false}],\"success\":true,\"version\":\"1.0\"}},\"success\":true,\"version\":\"1.0\"}\n" +
+                "\t\t)";
+        findAll("\\(([\\d\\D]+)\\)",str,1);
 
-        String string = "html,body,div,p{margin:0;padding:0}\n" +
-                "          body{font-size:14px;font-family:Arial,Microsoft YaHei,'宋体';background-color:#ffffff}\n" +
-                "          table{border-collapse:collapse;border-spacing:0;table-layout:fixed;}\n" +
-                "\n" +
-                "          th,td{font-size:13px;padding-left:0px}\n" +
-                "          a{text-decoration:none}\n" +
-                "          img{border:0 none}\n" +
-                "          .blue{text-decoration:none;color:#3c3d5d}\n" +
-                "          .column{width:702px;line-height:28px;}\n" +
-                "          .column .gray{color:#999999;word-break:break-word;}\n" +
-                "          .column .gray2{color:#666666}";
-        String regex = "body,?.*?\\{.*?font-family:(.*?)[,;].*?}";
-        findAll(regex, string, 1);
+
+//        String str = "2014.10 - 至今 嘉实多(深圳)有限公司上海分公司 (4年 4个月)";
+//        System.out.println(str.replaceFirst("\\((?=\\d).*?(年|个月)\\)",""));
+
+//        String str = "2013.09 - 2015.07 中国石油大学(北京) 工商管理 大专";
+//        String regex = "2013.*";
+//        System.out.println(str.matches(regex));
+
+//        String string = "应聘职位:   汽车后市场-客户经理   智联招聘###应聘机构:   京东集团###工作地点:   广州###ID:Y3NRmTwiXlxjD5i3ovJe8A          更新时间:2018.11.06###陈文经   手机:15989140982###男 28岁 (1990年4月) 7年工作经验 大专 未婚  现居住地:广州 | 户口:湛江 | 中共党员(含预备党员)###身份证:440882199004258617 手机:15989140982 E-mail:371592370@qq.com";
+//        String regex = "(?<!(工作地点|应聘机构|应聘职位|期望从事职业|简历更新时间|现居住地)(：|:)\\s*)(^|#|\\s|\ufeff)((广|陈)(\\s*[一-龥]){1,4})(#|[^:：一-龥]|\\s*$)";
+//        findAll(regex, string, 4);
+
+
+//        String str = "负责 android端框哈哈哈架开发,应用开发及迭代,参与的产品有平板端应用和手机端应用。&-&汇报对\r\n" +
+//                "象:部门主管 | 下属人数:2人\n" +
+//                "业绩描述:负责新项目的技术研究和带队开发,包含多媒体技术、试卷展示与答题功能。\n" +
+//                "\n";
+//        String reg = ".*(汇\\s*报\\s*对\\s*象)[#\\s:： ]+部门主管.*";
+//        System.out.println(str.replaceAll("[\r\n]","").matches(reg));
+
+
+//        String string = "html,body,div,p{margin:0;padding:0}\n" +
+//                "          body{font-size:14px;font-family:Arial,Microsoft YaHei,'宋体';background-color:#ffffff}\n" +
+//                "          table{border-collapse:collapse;border-spacing:0;table-layout:fixed;}\n" +
+//                "\n" +
+//                "          th,td{font-size:13px;padding-left:0px}\n" +
+//                "          a{text-decoration:none}\n" +
+//                "          img{border:0 none}\n" +
+//                "          .blue{text-decoration:none;color:#3c3d5d}\n" +
+//                "          .column{width:702px;line-height:28px;}\n" +
+//                "          .column .gray{color:#999999;word-break:break-word;}\n" +
+//                "          .column .gray2{color:#666666}";
+//        String regex = "body,?.*?\\{.*?font-family:(.*?)[,;].*?}";
+//        findAll(regex, string, 1);
 
 //        String string = "font-family:宋体;mso-ascii-font-family:Calibri;  mso-ascii-theme-font:minor-latin;mso-fareast-font-family:宋体;mso-fareast-theme-font:  minor-fareast;mso-hansi-font-family:Calibri;mso-hansi-theme-font:minor-latin";
 //        String regex = ".*?font-family:\\s*\"?(.*?)[\";].*";
@@ -230,9 +255,8 @@ public class regexLearning {
         }
     }
 
-    private static boolean isMatch(String str) {
+    private static boolean isMatch(String str, String regex) {
 
-        String regex = "^\\d?[a-zA-Z0-9]@[a-zA-Z]{1,10}.com$";
         Pattern pattern = Pattern.compile(regex);
         Matcher matcher = pattern.matcher(str);
         boolean re = matcher.matches();

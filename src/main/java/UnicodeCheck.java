@@ -6,8 +6,8 @@ public class UnicodeCheck {
 
 
     public static void main(String[] args) {
-        String s = " ";
-        String s2 = " ";
+        String s = "好的";
+        String s2 = "好的";
         System.out.println(stringToUnicode(s));
         System.out.println(stringToUnicode(s2));
         System.out.println(s.equals(s2));
