@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: com.jd.jimi3.shared:jd-jimi3-shared:3.0-SNAPSHOT">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/jd/jimi3/shared/jd-jimi3-shared/3.0-SNAPSHOT/jd-jimi3-shared-3.0-20191205.110037-128.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/com/jd/jimi3/shared/jd-jimi3-shared/3.0-SNAPSHOT/jd-jimi3-shared-3.0-20191205.110037-128-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/jd/jimi3/shared/jd-jimi3-shared/3.0-SNAPSHOT/jd-jimi3-shared-3.0-20191205.110037-128-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

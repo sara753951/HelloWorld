@@ -16,23 +16,26 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" name="Spring-4.3.18.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: org.apache.pdfbox:pdfbox:2.0.12" level="project" />
     <orderEntry type="library" name="Maven: org.apache.pdfbox:fontbox:2.0.12" level="project" />
     <orderEntry type="library" name="Maven: commons-logging:commons-logging:1.2" level="project" />
     <orderEntry type="library" name="Maven: org.jsoup:jsoup:1.11.3" level="project" />
-    <orderEntry type="library" name="Maven: com.itextpdf:itextpdf:5.5.12" level="project" />
-    <orderEntry type="library" name="Maven: com.itextpdf:itext-pdfa:5.5.13" level="project" />
-    <orderEntry type="library" name="Maven: com.itextpdf:itext-xtra:5.5.13" level="project" />
+    <orderEntry type="library" name="Maven: com.itextpdf:itextpdf:5.5.13.1" level="project" />
+    <orderEntry type="library" name="Maven: com.itextpdf:itext-pdfa:5.5.13.1" level="project" />
+    <orderEntry type="library" name="Maven: com.itextpdf:itext-xtra:5.5.13.1" level="project" />
     <orderEntry type="library" name="Maven: org.apache.commons:commons-imaging:1.0-SNAPSHOT" level="project" />
     <orderEntry type="library" name="Maven: commons-io:commons-io:2.4" level="project" />
-    <orderEntry type="library" name="Maven: com.itextpdf.tool:xmlworker:5.5.13" level="project" />
-    <orderEntry type="library" name="Maven: org.apache.poi:poi-ooxml:3.14" level="project" />
-    <orderEntry type="library" name="Maven: org.apache.poi:poi:3.14" level="project" />
-    <orderEntry type="library" name="Maven: commons-codec:commons-codec:1.10" level="project" />
-    <orderEntry type="library" name="Maven: org.apache.poi:poi-ooxml-schemas:3.14" level="project" />
-    <orderEntry type="library" name="Maven: org.apache.xmlbeans:xmlbeans:2.6.0" level="project" />
-    <orderEntry type="library" name="Maven: stax:stax-api:1.0.1" level="project" />
-    <orderEntry type="library" name="Maven: com.github.virtuald:curvesapi:1.03" level="project" />
+    <orderEntry type="library" name="Maven: com.itextpdf.tool:xmlworker:5.5.13.1" level="project" />
+    <orderEntry type="library" name="Maven: org.apache.poi:poi-ooxml:4.1.2" level="project" />
+    <orderEntry type="library" name="Maven: org.apache.poi:poi:4.1.2" level="project" />
+    <orderEntry type="library" name="Maven: commons-codec:commons-codec:1.13" level="project" />
+    <orderEntry type="library" name="Maven: org.apache.commons:commons-math3:3.6.1" level="project" />
+    <orderEntry type="library" name="Maven: com.zaxxer:SparseBitSet:1.2" level="project" />
+    <orderEntry type="library" name="Maven: org.apache.poi:poi-ooxml-schemas:4.1.2" level="project" />
+    <orderEntry type="library" name="Maven: org.apache.xmlbeans:xmlbeans:3.1.0" level="project" />
+    <orderEntry type="library" name="Maven: org.apache.commons:commons-compress:1.19" level="project" />
+    <orderEntry type="library" name="Maven: com.github.virtuald:curvesapi:1.06" level="project" />
     <orderEntry type="library" name="Maven: org.apache.poi:poi-scratchpad:3.8" level="project" />
     <orderEntry type="library" name="Maven: fr.opensagres.xdocreport:org.apache.poi.xwpf.converter.xhtml:1.0.4" level="project" />
     <orderEntry type="library" name="Maven: fr.opensagres.xdocreport:org.apache.poi.xwpf.converter.core:1.0.4" level="project" />
@@ -44,6 +47,7 @@
     <orderEntry type="library" name="Maven: javax.mail:mail:1.4.7" level="project" />
     <orderEntry type="library" name="Maven: javax.activation:activation:1.1" level="project" />
     <orderEntry type="library" name="Maven: com.hankcs:hanlp:portable-1.7.1" level="project" />
+    <orderEntry type="library" name="Maven: cn.hutool:hutool-all:5.0.6" level="project" />
     <orderEntry type="library" name="Maven: com.jd.jim.cli:jim-cli-jedis:1.4.5-SNAPSHOT" level="project" />
     <orderEntry type="library" name="Maven: com.jd.jim.cli:jim-cli-driver:1.4.5-SNAPSHOT" level="project" />
     <orderEntry type="library" name="Maven: org.apache.commons:commons-lang3:3.3.2" level="project" />
@@ -58,6 +62,10 @@
     <orderEntry type="library" name="Maven: com.google.guava:guava:19.0" level="project" />
     <orderEntry type="library" name="Maven: com.jd:jst-core:1.0.0-SNAPSHOT" level="project" />
     <orderEntry type="library" name="Maven: com.jd:jst-jvm-enhance:1.0.0-SNAPSHOT" level="project" />
-    <orderEntry type="library" name="Spring-4.3.18.RELEASE" level="project" />
+    <orderEntry type="library" name="Maven: com.jd.jimi.pop:jd-jimi-pop-sdk:1.0-SNAPSHOT" level="project" />
+    <orderEntry type="library" name="Maven: com.jd.jimi3.gw:xz-jimi3-gw-sdk:3.0-SNAPSHOT" level="project" />
+    <orderEntry type="library" name="Maven: com.jd.jimi3.shared:jd-jimi3-shared:3.0-SNAPSHOT" level="project" />
+    <orderEntry type="library" name="Maven: com.jd.jimi3.gw:xz-jimi3-gw-domain:3.0-SNAPSHOT" level="project" />
+    <orderEntry type="library" name="Maven: com.jd.jimi3.xz:xz-jimi3-kbqa-api:0.0.3-SNAPSHOT" level="project" />
   </component>
 </module>
