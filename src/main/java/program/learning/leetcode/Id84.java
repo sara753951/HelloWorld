@@ -103,9 +103,36 @@ public class Id84 {
         return max;
     }
 
+    //栈
+    public int largestRectangleArea3(int[] heights) {
+        int max = 0;
+
+        Stack<Integer> stack = new Stack<>();
+        for (int i = 0; i < heights.length; i++) {
+            while (!stack.empty() && heights[stack.peek()] > heights[i]) {
+                //当 当前位置的高度 < 栈顶位置的高度 时，说明以栈顶位置为高度的矩形可以算出最左最右的距离了
+                int height = heights[stack.pop()];
+                int left = stack.empty() ? -1 : stack.peek();
+                int s = height * (i - left - 1);
+                max = Math.max(max, s);
+            }
+            stack.push(i);
+        }
+
+        while (!stack.isEmpty()) {
+            int height = heights[stack.pop()];
+            int right = heights.length;
+            int left = stack.empty() ? -1 : stack.peek();
+            int s = height * (right - left - 1);
+            max = Math.max(max, s);
+        }
+
+        return max;
+    }
+
     public static void main(String[] args) {
         int[] heights = new int[]{1,3,5,7,6,4,2};
         Id84 id84 = new Id84();
-        System.out.println(id84.largestRectangleArea2(heights));
+        System.out.println(id84.largestRectangleArea3(heights));
     }
 }
