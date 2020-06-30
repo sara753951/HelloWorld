@@ -1,8 +1,6 @@
 package program.whatever;
 
 import com.alibaba.fastjson.JSONObject;
-import com.jd.jimi.pop.sdk.service.ChatMessageReceiveService;
-import com.jd.jimi3.gw.domain.IMMessage;
 
 import javax.annotation.Resource;
 import java.text.ParseException;
@@ -14,8 +12,6 @@ import java.util.*;
  */
 public class Hello {
 
-    @Resource(name = "chatMessageReceiveService")
-    private static ChatMessageReceiveService chatMessageReceiveService;
 
     public static void main(String[] args) throws ParseException {
 

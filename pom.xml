@@ -65,11 +65,11 @@
 
 
 
-        <dependency>
-            <groupId>org.apache.poi</groupId>
-            <artifactId>poi-ooxml</artifactId>
-            <version>3.8</version>
-        </dependency>
+        <!--<dependency>-->
+            <!--<groupId>org.apache.poi</groupId>-->
+            <!--<artifactId>poi-ooxml</artifactId>-->
+            <!--<version>3.8</version>-->
+        <!--</dependency>-->
         <dependency>
             <groupId>org.apache.poi</groupId>
             <artifactId>poi-scratchpad</artifactId>
@@ -138,66 +138,9 @@
         </dependency>
 
         <dependency>
-            <groupId>com.jd.jim.cli</groupId>
-            <artifactId>jim-cli-jedis</artifactId>
-            <version>1.4.5-SNAPSHOT</version>
-            <exclusions>
-                <exclusion>
-                    <groupId>org.slf4j</groupId>
-                    <artifactId>slf4j-api</artifactId>
-                </exclusion>
-                <exclusion>
-                    <groupId>org.slf4j</groupId>
-                    <artifactId>slf4j-log4j12</artifactId>
-                </exclusion>
-                <exclusion>
-                    <groupId>log4j</groupId>
-                    <artifactId>log4j</artifactId>
-                </exclusion>
-            </exclusions>
-        </dependency>
-        <dependency>
-            <groupId>com.jd.jim.cli</groupId>
-            <artifactId>jim-cli-api</artifactId>
-            <version>1.4.5-SNAPSHOT</version>
-            <exclusions>
-                <exclusion>
-                    <groupId>org.slf4j</groupId>
-                    <artifactId>slf4j-api</artifactId>
-                </exclusion>
-                <exclusion>
-                    <groupId>org.slf4j</groupId>
-                    <artifactId>slf4j-log4j12</artifactId>
-                </exclusion>
-                <exclusion>
-                    <groupId>log4j</groupId>
-                    <artifactId>log4j</artifactId>
-                </exclusion>
-            </exclusions>
-        </dependency>
-
-
-        <dependency>
-            <groupId>com.jd.jimi.pop</groupId>
-            <artifactId>jd-jimi-pop-sdk</artifactId>
-            <version>1.0-SNAPSHOT</version>
-        </dependency>
-
-        <dependency>
-            <groupId>com.jd.jimi3.gw</groupId>
-            <artifactId>xz-jimi3-gw-sdk</artifactId>
-            <version>3.0-SNAPSHOT</version>
-        </dependency>
-        <dependency>
-            <groupId>com.jd.jimi3.gw</groupId>
-            <artifactId>xz-jimi3-gw-domain</artifactId>
-            <version>3.0-SNAPSHOT</version>
-        </dependency>
-
-        <dependency>
-            <groupId>com.jd.jimi3.xz</groupId>
-            <artifactId>xz-jimi3-kbqa-api</artifactId>
-            <version>0.0.3-SNAPSHOT</version>
+            <groupId>com.alibaba</groupId>
+            <artifactId>fastjson</artifactId>
+            <version>1.2.70</version>
         </dependency>
 
     </dependencies>
