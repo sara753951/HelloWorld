@@ -1,7 +1,7 @@
 package program.learning.leetcode;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+//import org.slf4j.Logger;
+//import org.slf4j.LoggerFactory;
 
 import java.util.Stack;
 
@@ -9,7 +9,7 @@ import java.util.Stack;
  * Created by yanxinming on 2020/6/13
  */
 public class Id84 {
-    private static final Logger LOGGER = LoggerFactory.getLogger(Id84.class);
+//    private static final Logger LOGGER = LoggerFactory.getLogger(Id84.class);
 
     //luohui
     public int largestRectangleArea(int[] heights) {
@@ -36,7 +36,7 @@ public class Id84 {
                     int RightLessMin = p;
                     //计算面积
                     int area = (RightLessMin - leftLessMin - 1) * height;
-                    LOGGER.info("当前高度:{},leftlessMin:{},rightLessMin:{},area:{}",height,leftLessMin,RightLessMin,area);
+//                    LOGGER.info("当前高度:{},leftlessMin:{},rightLessMin:{},area:{}",height,leftLessMin,RightLessMin,area);
                     maxArea = Math.max(area, maxArea);
                 }
             }
@@ -49,7 +49,7 @@ public class Id84 {
             //右边没有小于当前高度的柱子，所以赋值为数组的长度便于计算
             int RightLessMin = heights.length;
             int area = (RightLessMin - leftLessMin - 1) * height;
-            LOGGER.info("当前高度:{},leftlessMin:{},rightLessMin:{},area:{}",height,leftLessMin,RightLessMin,area);
+//            LOGGER.info("当前高度:{},leftlessMin:{},rightLessMin:{},area:{}",height,leftLessMin,RightLessMin,area);
             maxArea = Math.max(area, maxArea);
         }
         return maxArea;

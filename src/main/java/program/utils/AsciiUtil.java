@@ -1,5 +1,8 @@
 package program.utils;
 
+import cn.hutool.core.date.DateUtil;
+import org.apache.commons.codec.binary.StringUtils;
+
 import java.io.IOException;
 
 /**
@@ -119,11 +122,17 @@ public class AsciiUtil {
 
     public static void main(String[] args) throws IOException {
 
+        if (DateUtil.parse("2020-08-04 22:10:00").before(DateUtil.parse("2020-08-04"))) {
+            System.out.println("1false");
+        }
+        if (DateUtil.parse("2020-08-04 22:10:00").after(DateUtil.parse("2020-08-05"))) {
+            System.out.println("2false");
+        }
 //        String s = "北京城市学院";
 //        showIntArray(string2ASCII(s), " ");
 //        System.out.println();
-        int[] asciiArray = {21271,20140,22478,24066,23398,38498};
-        System.out.println(ascii2String(asciiArray));
+//        int[] asciiArray = {21271,20140,22478,24066,23398,38498};
+//        System.out.println(ascii2String(asciiArray));
 
 //        createFile("c://console_ch.txt", getCHASCII(0, 50000));
     }

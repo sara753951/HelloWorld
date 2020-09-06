@@ -4,8 +4,8 @@ import cn.hutool.poi.excel.BigExcelWriter;
 import cn.hutool.poi.excel.ExcelUtil;
 import cn.hutool.poi.excel.ExcelWriter;
 import cn.hutool.poi.excel.StyleSet;
-import org.apache.commons.collections4.MapUtils;
-import org.apache.commons.lang3.StringUtils;
+//import org.apache.commons.collections4.MapUtils;
+//import org.apache.commons.lang3.StringUtils;
 import org.apache.poi.hssf.usermodel.HSSFCellStyle;
 import org.apache.poi.hssf.usermodel.HSSFDataFormat;
 import org.apache.poi.ss.usermodel.CellStyle;
@@ -60,10 +60,10 @@ public class ExcelUtils {
         writer.setStyle(cellStyle, 1,1);
 //        writer.setStyle(cellStyle, 3,50);
 
-        if (StringUtils.isNotBlank(sheetName)){
-            writer.setSheet(sheetName);
-            System.out.println(sheetName);
-        }
+//        if (StringUtils.isNotBlank(sheetName)){
+//            writer.setSheet(sheetName);
+//            System.out.println(sheetName);
+//        }
     }
 
 

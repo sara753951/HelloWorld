@@ -12,11 +12,15 @@ public class SomeTest {
 
     public static void main(String[] args) {
 
-        System.out.println(new Date());
-        List<Integer> types = new ArrayList<>();
-        types.add(1);
-//        types.add(2);
-        System.out.println(types.toString().replace("[","").replace("]",""));
+        String str1 = "你好，欢迎来到小米之家欢迎来到小米之家欢迎来到小米之家";
+        String str2 = "你好，欢迎来到小米之家欢迎来到小米之家欢迎来到小米之家,hh";
+        System.out.println(new SomeTest().similar(str1, str2));
+
+//        System.out.println(new Date());
+//        List<Integer> types = new ArrayList<>();
+//        types.add(1);
+////        types.add(2);
+//        System.out.println(types.toString().replace("[","").replace("]",""));
 
 //        String str = "<p>咱们是有<strong><span style=\"color: rgb(255, 0, 0);\">30</span></strong>天降价补差服务的哦\n" +
 //                "申请方法：\n" +

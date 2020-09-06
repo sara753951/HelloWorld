@@ -1,6 +1,6 @@
 package program.learning.aboutRegex;
 
-import org.apache.commons.lang3.StringUtils;
+//import org.apache.commons.lang3.StringUtils;
 
 import java.util.Arrays;
 import java.util.HashSet;
@@ -18,13 +18,29 @@ public class RegexLearning {
 
     public static void main(String[] args) {
 
-        System.out.println(StringUtils.startsWith("123", "1234"));
+        String ruleId = "2";
+        String regex = ".*(?<=^|,)(" + ruleId + "):(.*?)(?=(,|$)).*";
+        String str = "2:";
+        System.out.println(str.matches(regex));
+        findAll(regex, str, 2);
 
-        String str = "sss。本条例所  称农民工，是指为用人单位提供劳动的农村居民。\n" +
-                "本条例所称工资，是指农民工为用人单位提供劳动后应当获得的劳动报酬。sdddl。xxx指的是bcsuab。123";
-        String regex = "(?<=。|\\s)([^。]*?)(是指|指的是)(.*?)。";
-        findAll(regex, str, 1);
-        findAll(regex, str, 3);
+
+//        String keywordsRegex = ".*(稍等|等一下|等一会|稍后|等我|等会).*";
+//        String str = "稍等。。。";
+//        System.out.println(isMatch(str, keywordsRegex));
+//
+//        String[] keywords = {"推荐","商品"};
+//        String str2 = "商品从挪威推荐给你一个";
+//        String keywordsRegex2 = ".*(推荐).*(商品).*";
+//        System.out.println(isMatch(str2, keywordsRegex2));
+
+//        System.out.println(StringUtils.startsWith("123", "1234"));
+
+//        String str = "sss。本条例所  称农民工，是指为用人单位提供劳动的农村居民。\n" +
+//                "本条例所称工资，是指农民工为用人单位提供劳动后应当获得的劳动报酬。sdddl。xxx指的是bcsuab。123";
+//        String regex = "(?<=。|\\s)([^。]*?)(是指|指的是)(.*?)。";
+//        findAll(regex, str, 1);
+//        findAll(regex, str, 3);
 
 //        String content = "https://item.jd.com/1010247.html";
 ////        String content = "咨询订单号：77129645025 商品ID：7281403";
