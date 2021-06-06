@@ -45,12 +45,60 @@
 // 👍 252 👎 0
 
 package program.learning.leetcode.leetcode.editor.cn;
+
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Queue;
+
 public class Id116PopulatingNextRightPointersInEachNode {
     public static void main(String[] args) {
         Solution solution = new Id116PopulatingNextRightPointersInEachNode().new Solution();
+        Node root = new Node(1);
+        root.left = new Node(2);
+        root.right = new Node(3);
+        root.left.left = new Node(4);
+        solution.connect(root);
+        System.out.println();
+
     }
     //leetcode submit region begin(Prohibit modification and deletion)
-/*
+
+    class Solution {
+        public Node connect(Node root) {
+            if (root == null) {
+                return null;
+            }
+            Queue<Node> list = new LinkedList<>();
+            list.add(root);
+            list.add(null);
+            Node pre = null;
+            while (list.size() > 0) {
+                Node node = list.poll();
+                if (pre != null) {
+                    pre.next = node;
+                }
+                pre = node;
+                if (node != null) {
+                    if (node.left != null) {
+                        list.add(node.left);
+                    }
+                    if (node.right != null) {
+                        list.add(node.right);
+                    }
+                } else {
+                    if (list.size() > 0) {
+                        list.add(null);
+                    }
+                }
+            }
+            return root;
+        }
+    }
+//leetcode submit region end(Prohibit modification and deletion)
+
+
+    
+}
 // Definition for a Node.
 class Node {
     public int val;
@@ -59,7 +107,7 @@ class Node {
     public Node next;
 
     public Node() {}
-    
+
     public Node(int _val) {
         val = _val;
     }
@@ -70,15 +118,4 @@ class Node {
         right = _right;
         next = _next;
     }
-};
-*/
-
-class Solution {
-    public Node connect(Node root) {
-        
-    }
-}
-//leetcode submit region end(Prohibit modification and deletion)
-
-    
 }

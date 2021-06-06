@@ -88,6 +88,21 @@ public class SortTest {
             }
         return smallIndex;
     }
+    private static int partition1(int[] array, int start, int end) {
+        int pos = start;
+        for (int i = start + 1; i <= end; i++) {
+            if (array[start] > array[i]) {
+                int temp = array[i];
+                array[i] = array[pos + 1];
+                array[pos + 1] = temp;
+                pos++;
+            }
+        }
+        int temp = array[start];
+        array[start] = array[pos];
+        array[pos] = temp;
+        return pos;
+    }
 
     /**
      * 交换数组内两个元素

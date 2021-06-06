@@ -64,17 +64,67 @@
 // 👍 74 👎 0
 
 package program.learning.leetcode.leetcode.editor.cn;
+
+import java.util.ArrayList;
+import java.util.Map;
+import java.util.TreeMap;
+
 public class Id1370IncreasingDecreasingString {
+    public Id1370IncreasingDecreasingString() {
+    }
+
     public static void main(String[] args) {
         Solution solution = new Id1370IncreasingDecreasingString().new Solution();
+        String s = "aaaabbbbcccc";
+        String[] ss = s.split(".");
+        System.out.println(solution.sortString(s));
     }
     //leetcode submit region begin(Prohibit modification and deletion)
-class Solution {
-    public String sortString(String s) {
+    class Solution {
+        public String sortString(String s) {
+            if (s.length() < 1) {
+                return s;
+            }
+            Map<Character, Integer> charMap = new TreeMap<>();
+            for (int i = 0; i < s.length(); i++) {
+                charMap.put(s.charAt(i), charMap.containsKey(s.charAt(i)) ? charMap.get(s.charAt(i))+ 1 : 1);
+            }
+            StringBuilder sb = new StringBuilder();
+            Character[] characters = new Character[charMap.keySet().size()];
+            charMap.keySet().toArray(characters);
+            int i = 0;
+            boolean flag = true;
+            while (charMap.keySet().size() > 0) {
+                if (charMap.containsKey(characters[i])) {
+                    sb.append(characters[i]);
+                    int times = charMap.get(characters[i]);
+                    if (times > 1) {
+                        charMap.put(characters[i], times - 1);
+                    } else {
+                        charMap.remove(characters[i]);
+                    }
+                }
+                if (flag) {
+                    if (i == characters.length - 1) {
+                        flag = false;
+                    } else {
+                        i++;
+                    }
+                } else {
+                    if (i == 0) {
+                        flag = true;
+                    } else {
+                        i--;
+                    }
+                }
 
+            }
+
+
+            return sb.toString();
+        }
     }
-}
-//leetcode submit region end(Prohibit modification and deletion)
+    //leetcode submit region end(Prohibit modification and deletion)
 
     
 }

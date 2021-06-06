@@ -24,6 +24,9 @@
 // 👍 339 👎 0
 
 package program.learning.leetcode.leetcode.editor.cn;
+
+import java.util.Stack;
+
 public class Id538ConvertBstToGreaterTree {
     public static void main(String[] args) {
         Solution solution = new Id538ConvertBstToGreaterTree().new Solution();
@@ -38,12 +41,25 @@ public class Id538ConvertBstToGreaterTree {
  *     TreeNode(int x) { val = x; }
  * }
  */
-class Solution {
-    public TreeNode convertBST(TreeNode root) {
+    class Solution {
+        public TreeNode convertBST(TreeNode root) {
 
+            search(root, 0);
+            return root;
+        }
+
+        private int search(TreeNode root, int sum) {
+            if (root == null) {
+                return sum;
+            }
+            sum = search(root.right, sum);
+            sum += root.val;
+            root.val = sum;
+            sum = search(root.left, sum);
+            return sum;
+        }
     }
-}
-//leetcode submit region end(Prohibit modification and deletion)
+    //leetcode submit region end(Prohibit modification and deletion)
 
     
 }

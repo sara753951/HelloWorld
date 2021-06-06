@@ -1,9 +1,6 @@
 package program.learning;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.List;
+import java.util.*;
 
 /**
  * Created by yanxinming on 2019/1/18
@@ -11,7 +8,15 @@ import java.util.List;
 public class MapTest {
 
     public static void main(String[] args) {
-        HashMap<Integer, List<Integer>> hashMap = new HashMap<>();
+        int n=666-1;
+        n |= n >> 1;
+        n |= n >> 2;
+        n |= n >> 4;
+        n |= n >> 8;
+        n |= n >> 16;
+        System.out.println(n);
+
+        Map<Integer, List<Integer>> hashMap = new HashMap<>();
         hashMap.put(1, Arrays.asList(1));
         hashMap.put(2, Arrays.asList(2,4));
         hashMap.put(3, Arrays.asList(3,6,9));

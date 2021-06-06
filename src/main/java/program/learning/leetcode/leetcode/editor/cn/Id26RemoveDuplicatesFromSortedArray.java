@@ -47,14 +47,28 @@ package program.learning.leetcode.leetcode.editor.cn;
 public class Id26RemoveDuplicatesFromSortedArray {
     public static void main(String[] args) {
         Solution solution = new Id26RemoveDuplicatesFromSortedArray().new Solution();
+        int[] nums = {1,1};
+        System.out.println(solution.removeDuplicates(nums));
     }
     //leetcode submit region begin(Prohibit modification and deletion)
-class Solution {
-    public int removeDuplicates(int[] nums) {
-
+    class Solution {
+        public int removeDuplicates(int[] nums) {
+            if (nums.length < 2) {
+                return nums.length;
+            }
+            int i = 0;
+            int j = 1;
+            while (j < nums.length){
+                if (nums[i] == nums[j]) {
+                    j++;
+                    continue;
+                }
+                nums[++i] = nums[j++];
+            }
+            return i + 1;
+        }
     }
-}
-//leetcode submit region end(Prohibit modification and deletion)
+    //leetcode submit region end(Prohibit modification and deletion)
 
     
 }

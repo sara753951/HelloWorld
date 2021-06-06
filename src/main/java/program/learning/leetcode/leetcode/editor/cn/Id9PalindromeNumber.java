@@ -27,17 +27,55 @@
 // 👍 1225 👎 0
 
 package program.learning.leetcode.leetcode.editor.cn;
+
+import java.util.ArrayList;
+import java.util.List;
+
 public class Id9PalindromeNumber {
     public static void main(String[] args) {
         Solution solution = new Id9PalindromeNumber().new Solution();
     }
     //leetcode submit region begin(Prohibit modification and deletion)
-class Solution {
-    public boolean isPalindrome(int x) {
+    class Solution {
+        public boolean isPalindrome(int x) {
+            if (x < 0) {
+                return false;
+            }
+            if (0 == x) {
+                return true;
+            }
+            int num = reverse(x);
+            return num == x;
+        }
 
+        public int reverse(int x) {
+            boolean flag = false;
+            if (x < 0) {
+                x = -x;
+                flag = true;
+            }
+            List<Integer> digits = new ArrayList<>();
+            while (x != 0) {
+                int digit = x % 10;
+                x /= 10;
+                digits.add(digit);
+            }
+            double number = 0;
+            double d = 1;
+            for (int i = digits.size() - 1; i >= 0; i--) {
+                number += d * digits.get(i);
+                d *= 10;
+            }
+            if (flag) {
+                number = -number;
+            }
+            if (number > Math.pow(2, 31) - 1 || number < -Math.pow(2, 31)) {
+                return 0;
+            }
+            return (int)number;
+        }
     }
-}
-//leetcode submit region end(Prohibit modification and deletion)
+    //leetcode submit region end(Prohibit modification and deletion)
 
     
 }

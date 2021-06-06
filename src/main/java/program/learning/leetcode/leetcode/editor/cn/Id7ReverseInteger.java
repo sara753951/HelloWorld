@@ -25,17 +25,47 @@
 // 👍 2183 👎 0
 
 package program.learning.leetcode.leetcode.editor.cn;
+
+import java.util.ArrayList;
+import java.util.List;
+
 public class Id7ReverseInteger {
     public static void main(String[] args) {
         Solution solution = new Id7ReverseInteger().new Solution();
+        System.out.println(Math.pow(2, 31));
+        int num = 1534236469;
+        System.out.println(solution.reverse(num));
     }
     //leetcode submit region begin(Prohibit modification and deletion)
-class Solution {
-    public int reverse(int x) {
-
+    class Solution {
+        public int reverse(int x) {
+            boolean flag = false;
+            if (x < 0) {
+                x = -x;
+                flag = true;
+            }
+            List<Integer> digits = new ArrayList<>();
+            while (x != 0) {
+                int digit = x % 10;
+                x /= 10;
+                digits.add(digit);
+            }
+            double number = 0;
+            double d = 1;
+            for (int i = digits.size() - 1; i >= 0; i--) {
+                number += d * digits.get(i);
+                d *= 10;
+            }
+            if (flag) {
+                number = -number;
+            }
+            if (number > Math.pow(2, 31) - 1 || number < -Math.pow(2, 31)) {
+                return 0;
+            }
+            return (int)number;
+        }
     }
-}
-//leetcode submit region end(Prohibit modification and deletion)
+    //leetcode submit region end(Prohibit modification and deletion)
 
     
 }

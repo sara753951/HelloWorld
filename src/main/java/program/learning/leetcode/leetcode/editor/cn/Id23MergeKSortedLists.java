@@ -63,7 +63,7 @@ public class Id23MergeKSortedLists {
  */
 class Solution {
     public ListNode mergeKLists(ListNode[] lists) {
-
+        return null;
     }
 }
 //leetcode submit region end(Prohibit modification and deletion)

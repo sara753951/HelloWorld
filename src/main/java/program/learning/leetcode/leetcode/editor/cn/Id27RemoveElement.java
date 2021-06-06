@@ -49,17 +49,36 @@
 // 👍 653 👎 0
 
 package program.learning.leetcode.leetcode.editor.cn;
+
+import com.alibaba.fastjson.JSON;
+
 public class Id27RemoveElement {
     public static void main(String[] args) {
         Solution solution = new Id27RemoveElement().new Solution();
+        int[] nums = {0,1,2,2,3,0,4,2};
+        int val = 2;
+        System.out.println(solution.removeElement(nums, val));
+        System.out.println(JSON.toJSONString(nums));
     }
     //leetcode submit region begin(Prohibit modification and deletion)
-class Solution {
-    public int removeElement(int[] nums, int val) {
-
+    class Solution {
+        public int removeElement(int[] nums, int val) {
+            if (nums.length < 1) {
+                return 0;
+            }
+            if (nums.length < 2) {
+                return nums[0] == val ? 0 : 1;
+            }
+            int len = 0;
+            for (int i = 0; i < nums.length; i++) {
+                if (nums[i] != val) {
+                    nums[len++] = nums[i];
+                }
+            }
+            return len;
+        }
     }
-}
-//leetcode submit region end(Prohibit modification and deletion)
+    //leetcode submit region end(Prohibit modification and deletion)
 
     
 }

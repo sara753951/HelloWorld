@@ -39,17 +39,56 @@
 // 👍 286 👎 0
 
 package program.learning.leetcode.leetcode.editor.cn;
+
+import com.alibaba.fastjson.JSON;
+
 public class Id80RemoveDuplicatesFromSortedArrayIi {
     public static void main(String[] args) {
         Solution solution = new Id80RemoveDuplicatesFromSortedArrayIi().new Solution();
+        int[] nums = {1,1,1,2,2,3};
+        System.out.println(solution.removeDuplicates(nums));
+        System.out.println(JSON.toJSONString(nums));
     }
     //leetcode submit region begin(Prohibit modification and deletion)
-class Solution {
-    public int removeDuplicates(int[] nums) {
+    class Solution {
+        public int removeDuplicates(int[] nums) {
+            if (nums.length <= 2) {
+                return nums.length;
+            }
+            int i = 0;
+            int val = nums[i];
+            int j = 1;
+            int times = 0;
+            while (i < nums.length && j < nums.length + 1) {
+                if (j < nums.length && val == nums[j]) {
+                    j++;
+                    times++;
+                    continue;
+                }
+                if (times < 1) {
+                    nums[i++] = val;
+                    if (j < nums.length) {
+                        val = nums[j];
+                    }
+                    j++;
+                } else {
+                    nums[i] = val;
+                    if (i + 1 < nums.length) {
+                        nums[i + 1] = val;
+                    }
+                    i += 2;
+                    if (j < nums.length) {
+                        val = nums[j];
+                    }
+                    j++;
 
+                }
+                times = 0;
+            }
+            return i;
+        }
     }
-}
-//leetcode submit region end(Prohibit modification and deletion)
+    //leetcode submit region end(Prohibit modification and deletion)
 
     
 }

@@ -1,10 +1,11 @@
-package program.learning;
+package program.learning.thread;
 
 /**
  * Created by yanxinming on 2019/12/24
  */
 public class ThreadTest {
 
+    private int flag = 0;
     private SimpleTask task = new SimpleTask();
     public static void main(String[] args) {
         ThreadTest plan = new ThreadTest();
@@ -12,12 +13,23 @@ public class ThreadTest {
     }
 
     public void start(){
-        Thread thread = new Thread(task);
-        thread.setUncaughtExceptionHandler((t, e) -> {
-            System.out.println(e.getMessage());
-            start();
-        });
-        thread.start();
+            Thread aThread = new Thread(new Runnable(){
+                @Override
+                public void run() {
+                    if (flag == 0) {
+                        System.out.print("a");
+                        flag = 1;
+                    }
+                }
+            });
+            aThread.start();
+//
+//        Thread thread = new Thread(task);
+//        thread.setUncaughtExceptionHandler((t, e) -> {
+//            System.out.println(e.getMessage());
+//            start();
+//        });
+//        thread.start();
     }
 
     static class SimpleTask implements Runnable{

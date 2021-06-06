@@ -2,7 +2,7 @@
 //
 // 示例 1: 
 //
-// 输入: [1,2,3,4,5,6,7] 和 k = 3
+// 输入: [1,2,3,4,5,6,7] 和 k = 3  index-len+k  1,2,7,4,5,6,3 => 1,6,7,4,5,2,3 => 5,6,7,4,1,2,3 =>
 //输出: [5,6,7,1,2,3,4]
 //解释:
 //向右旋转 1 步: [7,1,2,3,4,5,6]
@@ -28,17 +28,35 @@
 // 👍 685 👎 0
 
 package program.learning.leetcode.leetcode.editor.cn;
+
+import com.alibaba.fastjson.JSON;
+
 public class Id189RotateArray {
     public static void main(String[] args) {
         Solution solution = new Id189RotateArray().new Solution();
+        int[] nums = {1,2,3,4,5,6,7};
+        int k = 3;
+        solution.rotate(nums, k);
+        System.out.println(JSON.toJSONString(nums));
     }
     //leetcode submit region begin(Prohibit modification and deletion)
-class Solution {
-    public void rotate(int[] nums, int k) {
-
+    class Solution {
+        public void rotate(int[] nums, int k) {
+            if (nums.length < 1) {
+                return;
+            }
+            while (k > 0) {
+                int pre = nums[nums.length - 1];
+                for (int i = 0; i < nums.length; i++) {
+                    int temp = nums[i];
+                    nums[i] = pre;
+                    pre = temp;
+                }
+                k--;
+            }
+        }
     }
-}
-//leetcode submit region end(Prohibit modification and deletion)
+    //leetcode submit region end(Prohibit modification and deletion)
 
     
 }

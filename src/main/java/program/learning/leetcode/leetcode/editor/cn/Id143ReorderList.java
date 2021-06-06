@@ -14,6 +14,10 @@
 // 👍 295 👎 0
 
 package program.learning.leetcode.leetcode.editor.cn;
+
+import java.util.ArrayList;
+import java.util.List;
+
 public class Id143ReorderList {
     public static void main(String[] args) {
         Solution solution = new Id143ReorderList().new Solution();
@@ -31,7 +35,23 @@ public class Id143ReorderList {
  */
 class Solution {
     public void reorderList(ListNode head) {
-        
+        if (head == null || head.next == null) {
+            return;
+        }
+        ListNode node = head;
+        List<ListNode> nodeList = new ArrayList<>();
+        while (node != null) {
+            nodeList.add(node);
+            node = node.next;
+        }
+        for (int i = nodeList.size() - 1; i >= nodeList.size() / 2; i--) {
+            int index = nodeList.size() - 1 - i;
+            ListNode node1 = nodeList.get(index);
+            ListNode node2 = nodeList.get(i);
+            node2.next = node1.next;
+            node1.next = node2;
+        }
+        nodeList.get(nodeList.size() / 2).next = null;
     }
 }
 //leetcode submit region end(Prohibit modification and deletion)

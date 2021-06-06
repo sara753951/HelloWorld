@@ -27,9 +27,19 @@
 // 👍 159 👎 0
 
 package program.learning.leetcode.leetcode.editor.cn;
+
+import com.alibaba.fastjson.JSON;
+
+import java.util.ArrayList;
+import java.util.List;
+
 public class Id501FindModeInBinarySearchTree {
     public static void main(String[] args) {
         Solution solution = new Id501FindModeInBinarySearchTree().new Solution();
+        TreeNode root = new TreeNode(1);
+        root.right = new TreeNode(2);
+        root.right.left = new TreeNode(2);
+        System.out.println(JSON.toJSONString(solution.findMode(root)));
     }
     //leetcode submit region begin(Prohibit modification and deletion)
 /**
@@ -41,12 +51,42 @@ public class Id501FindModeInBinarySearchTree {
  *     TreeNode(int x) { val = x; }
  * }
  */
-class Solution {
-    public int[] findMode(TreeNode root) {
+    class Solution {
+        int count,maxCount,cur;
+        List<Integer> re = new ArrayList<>();
+        public int[] findMode(TreeNode root) {
+            dfs(root);
+            int[] result = new int[re.size()];
+            for (int i = 0; i < re.size(); i++) {
+                result[i] = re.get(i);
+            }
+            return result;
+        }
 
+        private void dfs(TreeNode root) {
+            if (root == null) {
+                return;
+            }
+            dfs(root.left);
+
+            if (root.val == cur) {
+                count++;
+            } else {
+                cur = root.val;
+                count = 1;
+            }
+            if (count > maxCount) {
+                re.clear();
+                re.add(cur);
+                maxCount = count;
+            } else if (count == maxCount) {
+                re.add(cur);
+            }
+
+            dfs(root.right);
+        }
     }
-}
-//leetcode submit region end(Prohibit modification and deletion)
+    //leetcode submit region end(Prohibit modification and deletion)
 
     
 }

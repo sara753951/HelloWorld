@@ -47,11 +47,31 @@ public class Id978LongestTurbulentSubarray {
         Solution solution = new Id978LongestTurbulentSubarray().new Solution();
     }
     //leetcode submit region begin(Prohibit modification and deletion)
-class Solution {
-    public int maxTurbulenceSize(int[] arr) {
-
+    class Solution {
+        public int maxTurbulenceSize(int[] arr) {
+            if (arr.length < 2) {
+                return 1;
+            }
+            int maxLength = 0;
+            int curLength = 1;
+            int preFlag = 0;
+            for (int i = 1; i < arr.length; i++) {
+                int curFlag = Integer.compare(arr[i], arr[i - 1]);
+                if (0 == curFlag) {
+                    curLength = 1;
+                } else {
+                    if (curFlag == preFlag) {
+                        curLength = 2;
+                    } else {
+                        curLength++;
+                    }
+                }
+                preFlag = curFlag;
+                maxLength = Math.max(maxLength, curLength);
+            }
+            return maxLength;
+        }
     }
-}
 //leetcode submit region end(Prohibit modification and deletion)
 
     

@@ -16,17 +16,47 @@
 // 👍 1202 👎 0
 
 package program.learning.leetcode.leetcode.editor.cn;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
 public class Id46Permutations {
     public static void main(String[] args) {
         Solution solution = new Id46Permutations().new Solution();
+        solution.permute(new int[]{1,2,3});
     }
-    //leetcode submit region begin(Prohibit modification and deletion)
-class Solution {
-    public List<List<Integer>> permute(int[] nums) {
 
+    //leetcode submit region begin(Prohibit modification and deletion)
+    class Solution {
+        public List<List<Integer>> permute(int[] nums) {
+            List<List<Integer>> results = new ArrayList<>();
+            List<Integer> result = new ArrayList<>();
+            permute(results,result,nums,0);
+            return results;
+        }
+
+        private void permute(List<List<Integer>> results, List<Integer> result, int[] nums, int i){
+            if(i == nums.length){
+                results.add(new ArrayList(result));
+                return;
+            }
+            for(int j=i;j<nums.length;j++){
+                swap(nums,i,j);
+                result.add(nums[i]);
+                permute(results,result,nums,i+1);
+                result.remove(result.size() - 1);
+                swap(nums,i,j);
+            }
+        }
+
+        private void swap(int[] nums,int i,int j){
+            int temp = nums[i];
+            nums[i] = nums[j];
+            nums[j] = temp;
+        }
     }
-}
 //leetcode submit region end(Prohibit modification and deletion)
 
-    
+
 }
