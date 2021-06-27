@@ -1,4 +1,4 @@
-package asm;
+package program.asm;
 
 /**
  * @Auther yanxinming
