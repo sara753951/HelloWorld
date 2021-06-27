@@ -1,11 +1,0 @@
-
-8squid:S1643"Use a StringBuilder instead.(‹ ãÂşÿÿÿÿ
-8squid:S1643"Use a StringBuilder instead.(»ÅÜÌùÿÿÿÿ
-T
-squid:S106"9Replace this use of System.out or System.err by a logger.(úÑØıÿÿÿÿ
-O
-squid:S106"9Replace this use of System.out or System.err by a logger.(áå–Ä
-T
-squid:S106"9Replace this use of System.out or System.err by a logger.(áÎ©Áûÿÿÿÿ
-Psquid:S3400"9Remove this method and declare a constant for this value.(ùØ²Ä
-1squid:S1220""Move this file to a named package.
