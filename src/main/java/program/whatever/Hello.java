@@ -1,10 +1,13 @@
 package program.whatever;
 
+import cn.hutool.core.date.DateUtil;
 import com.alibaba.fastjson.JSONObject;
 import org.apache.commons.codec.binary.StringUtils;
+import org.apache.commons.compress.utils.Lists;
 import program.learning.leetcode.ListNode;
 
 import javax.annotation.Resource;
+import java.nio.charset.Charset;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.*;
@@ -17,12 +20,69 @@ public class Hello {
 
     public static void main(String[] args) throws ParseException {
 
-        byte[] test = {9};
-        System.out.println(new String(test));
-        byte[] key = {49, 48, 46, 49, 55, 51, 46, 49, 49, 56, 46, 49, 57};
-        System.out.println(new String(key));
-        byte[] value = {50, 48, 50, 48, 45, 48, 56, 45, 50, 56, 32, 49, 49, 58, 51, 48, 58, 49, 56, 46, 49, 52, 50, 9, 120, 122, 45, 106, 105, 109, 105, 51, 45, 103, 119, 9, 49, 49, 46, 49, 56, 46, 49, 53, 57, 46, 49, 57, 50, 9, 50, 48, 50, 48, 45, 48, 56, 45, 50, 56, 32, 49, 49, 58, 51, 48, 58, 49, 56, 46, 50, 48, 51, 9, 50, 52, 54, 99, 99, 56, 98, 54, 54, 100, 53, 98, 100, 52, 100, 54, 48, 49, 102, 98, 53, 55, 50, 102, 101, 51, 48, 99, 53, 102, 100, 99, 9, 112, 99, 49, 53, 57, 56, 53, 56, 53, 52, 52, 49, 54, 49, 49, 49, 98, 51, 49, 56, 55, 57, 97, 101, 9, 9, 120, 105, 97, 111, 110, 101, 110, 103, 49, 9, 107, 102, 95, 57, 48, 48, 48, 49, 95, 116, 101, 109, 112, 108, 97, 116, 101, 95, 52, 95, 49, 53, 57, 56, 53, 55, 57, 49, 56, 52, 54, 52, 50, 53, 57, 50, 55, 54, 49, 9, 107, 102, 95, 57, 48, 48, 48, 49, 95, 116, 101, 109, 112, 108, 97, 116, 101, 95, 52, 9, 107, 102, 95, 57, 48, 48, 48, 49, 95, 55, 50, 56, 55, 101, 56, 55, 55, 45, 99, 97, 57, 55, 45, 52, 57, 97, 101, 45, 97, 99, 100, 101, 45, 56, 102, 57, 48, 55, 56, 51, 50, 99, 56, 54, 101, 9, 50, 56, 51, 50, 53, 57, 52, 53, 51, 52, 49, 9, 9, 49, 9, 9, 55, 57, 56, 56, 50, 53, 9, 50, 48, 50, 48, 45, 48, 56, 45, 50, 56, 32, 49, 49, 58, 51, 48, 58, 49, 56, 46, 49, 52, 50, 9, 113, 117, 97, 110, 122, 105, 98, 101, 110};
-        System.out.println(new String(value));
+
+        int cap = 16;
+        int n = cap - 1;
+        System.out.println("0：" + n);
+        n |= n >>> 1;
+        System.out.println("1：" + n);
+        n |= n >>> 2;
+        System.out.println("2：" + n);
+        n |= n >>> 4;
+        System.out.println("4：" + n);
+        n |= n >>> 8;
+        System.out.println("8：" + n);
+        n |= n >>> 16;
+        System.out.println("16：" + n);
+        System.out.println(n + 1);
+
+
+
+//        StringBuilder sb = new StringBuilder();
+//        for (int i = 0; i < 25; i++) {
+//            for (int j = 0; j < 25; j++) {
+//                char a = (char) ('A'+i);
+//                char b = (char) ('A' + j);
+//                sb.append(a).append(b).append(2).append(",");
+//            }
+//        }
+//        System.out.println(sb.toString());
+        //cpu cache
+//        int[][] a = new int[10000][10000];
+//        long t1 = System.currentTimeMillis();
+//        for (int i = 0; i < 10000; i++) {
+//            for (int j = 0; j < 10000; j++) {
+//                a[i][j] = 0;
+//            }
+//        }
+//        long t2 = System.currentTimeMillis();
+//        for (int i = 0; i < 10000; i++) {
+//            for (int j = 0; j < 10000; j++) {
+//                a[j][i] = 0;
+//            }
+//        }
+//        long t3 = System.currentTimeMillis();
+//        System.out.println(t2 - t1);
+//        System.out.println(t3 - t2);
+
+
+//        String str = "6@554";
+//        System.out.println(str.getBytes(Charset.forName("UTF-8")));
+
+//        Date d1 = new Date(1602811927453L);
+//        Date d2 = new Date(1602811927938L);
+//
+//        System.out.println(d1);
+//        System.out.println(d2);
+
+//        System.out.println(DateUtil.endOfDay(new Date()));
+
+//        byte[] test = {9};
+//        System.out.println(new String(test));
+//        byte[] key = {49, 48, 46, 49, 55, 51, 46, 49, 49, 56, 46, 49, 57};
+//        System.out.println(new String(key));
+//        byte[] value = {50, 48, 50, 48, 45, 48, 56, 45, 50, 56, 32, 49, 49, 58, 51, 48, 58, 49, 56, 46, 49, 52, 50, 9, 120, 122, 45, 106, 105, 109, 105, 51, 45, 103, 119, 9, 49, 49, 46, 49, 56, 46, 49, 53, 57, 46, 49, 57, 50, 9, 50, 48, 50, 48, 45, 48, 56, 45, 50, 56, 32, 49, 49, 58, 51, 48, 58, 49, 56, 46, 50, 48, 51, 9, 50, 52, 54, 99, 99, 56, 98, 54, 54, 100, 53, 98, 100, 52, 100, 54, 48, 49, 102, 98, 53, 55, 50, 102, 101, 51, 48, 99, 53, 102, 100, 99, 9, 112, 99, 49, 53, 57, 56, 53, 56, 53, 52, 52, 49, 54, 49, 49, 49, 98, 51, 49, 56, 55, 57, 97, 101, 9, 9, 120, 105, 97, 111, 110, 101, 110, 103, 49, 9, 107, 102, 95, 57, 48, 48, 48, 49, 95, 116, 101, 109, 112, 108, 97, 116, 101, 95, 52, 95, 49, 53, 57, 56, 53, 55, 57, 49, 56, 52, 54, 52, 50, 53, 57, 50, 55, 54, 49, 9, 107, 102, 95, 57, 48, 48, 48, 49, 95, 116, 101, 109, 112, 108, 97, 116, 101, 95, 52, 9, 107, 102, 95, 57, 48, 48, 48, 49, 95, 55, 50, 56, 55, 101, 56, 55, 55, 45, 99, 97, 57, 55, 45, 52, 57, 97, 101, 45, 97, 99, 100, 101, 45, 56, 102, 57, 48, 55, 56, 51, 50, 99, 56, 54, 101, 9, 50, 56, 51, 50, 53, 57, 52, 53, 51, 52, 49, 9, 9, 49, 9, 9, 55, 57, 56, 56, 50, 53, 9, 50, 48, 50, 48, 45, 48, 56, 45, 50, 56, 32, 49, 49, 58, 51, 48, 58, 49, 56, 46, 49, 52, 50, 9, 113, 117, 97, 110, 122, 105, 98, 101, 110};
+//        System.out.println(new String(value));
 
 
 //        final int MAXIMUM_CAPACITY = 1 << 30;
